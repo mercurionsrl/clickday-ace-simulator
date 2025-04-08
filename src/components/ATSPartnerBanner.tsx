@@ -12,7 +12,6 @@ export const ATSPartnerBanner = () => {
             className="h-16 w-auto"
           />
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Partnership d'Eccellenza</h3>
             <p className="text-gray-700">
               Progetto in collaborazione con <span className="font-semibold">ATS - Consulenti Associati</span>, 
               esperti nella consulenza per i bandi INAIL.
