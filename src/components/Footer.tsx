@@ -112,8 +112,19 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-gray-800 text-sm text-center">
-          <p>&copy; {new Date().getFullYear()} ClickAce. Tutti i diritti riservati.</p>
+        <div className="mt-12 pt-8 border-t border-gray-800 text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; {new Date().getFullYear()} ClickAce. Tutti i diritti riservati.</p>
+            <div className="flex items-center gap-2">
+              <span>Progetto in collaborazione con</span>
+              <img 
+                src="/lovable-uploads/5129b4b6-db28-4e06-99a2-3c6a636cee0d.png" 
+                alt="ATS Logo" 
+                className="h-8 w-auto" 
+              />
+              <span className="font-medium">ATS - Consulenti Associati</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

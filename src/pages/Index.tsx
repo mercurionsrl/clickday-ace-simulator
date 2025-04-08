@@ -5,6 +5,7 @@ import Features from '@/components/Features';
 import PricingCards from '@/components/PricingCards';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import { ATSPartnerBanner } from '@/components/ATSPartnerBanner';
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <ATSPartnerBanner />
         <Features />
         <PricingCards />
         <ContactForm />
