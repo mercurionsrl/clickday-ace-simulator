@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Telegram, Linkedin, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -25,16 +25,8 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white transition-colors">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
+                <Telegram className="h-5 w-5" />
+                <span className="sr-only">Telegram</span>
               </a>
               <a href="#" className="hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
