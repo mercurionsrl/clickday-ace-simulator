@@ -4,14 +4,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
-import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, CheckCircle } from 'lucide-react';
 
 const ContactForm = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     package: '',
     message: ''
   });
@@ -42,7 +41,6 @@ const ContactForm = () => {
         setFormData({
           name: '',
           email: '',
-          phone: '',
           package: '',
           message: ''
         });
@@ -117,19 +115,6 @@ const ContactForm = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Telefono
-                  </label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="Il tuo numero di telefono"
-                  />
-                </div>
-                
-                <div>
                   <label htmlFor="package" className="block text-sm font-medium text-gray-700 mb-1">
                     Pacchetto interessato
                   </label>
@@ -144,7 +129,7 @@ const ContactForm = () => {
                     <option value="">Seleziona un pacchetto</option>
                     <option value="base">Base (Gratuito)</option>
                     <option value="pro">Pro</option>
-                    <option value="enterprise">Enterprise</option>
+                    <option value="azienda">Azienda</option>
                   </select>
                 </div>
                 
@@ -191,19 +176,6 @@ const ContactForm = () => {
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100 card-hover">
               <div className="flex items-start">
                 <div className="w-10 h-10 rounded-full bg-clickblue-100 flex items-center justify-center mr-4">
-                  <Phone className="h-5 w-5 text-clickblue-600" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold mb-1">Telefono</h4>
-                  <p className="text-gray-600">+39 02 1234567</p>
-                  <p className="text-gray-600">Lun-Ven: 9:00-18:00</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100 card-hover">
-              <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-clickblue-100 flex items-center justify-center mr-4">
                   <MapPin className="h-5 w-5 text-clickblue-600" />
                 </div>
                 <div>
@@ -219,7 +191,7 @@ const ContactForm = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-clickgreen-500 mr-2 flex-shrink-0" />
-                  <span className="text-gray-700">Oltre 5.000 utenti hanno migliorato le loro prestazioni</span>
+                  <span className="text-gray-700">Oltre 350 utenti hanno migliorato le loro prestazioni</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-clickgreen-500 mr-2 flex-shrink-0" />

@@ -91,19 +91,19 @@ const Hero = () => {
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-100 card-hover">
             <h3 className="text-4xl font-bold text-gray-900 mb-2">
-              <AnimatedCounter end={5000} duration={2} />+
+              <AnimatedCounter end={350} duration={2} />+
             </h3>
             <p className="text-gray-600">Utenti allenati</p>
           </div>
           <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-100 card-hover">
             <h3 className="text-4xl font-bold text-gray-900 mb-2">
-              <AnimatedCounter end={98} duration={2} />%
+              <AnimatedCounter end={100} duration={2} />%
             </h3>
             <p className="text-gray-600">Tasso di miglioramento</p>
           </div>
           <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-100 card-hover">
             <h3 className="text-4xl font-bold text-gray-900 mb-2">
-              <AnimatedCounter end={120} duration={2} /> ms
+              <AnimatedCounter end={18} duration={2} /> s
             </h3>
             <p className="text-gray-600">Tempo medio di reazione migliorato</p>
           </div>

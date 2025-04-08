@@ -1,13 +1,15 @@
 
-import { MousePointer, Clock, BarChart3, Brain, Bell, Award } from 'lucide-react';
+import { MousePointer, Clock, BarChart3, MessageSquare, Users, Award } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
-const FeatureCard = ({ icon: Icon, title, description }: { icon: any, title: string, description: string }) => (
+const FeatureCard = ({ icon: Icon, title, description, button }: { icon: any, title: string, description: string, button?: React.ReactNode }) => (
   <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-100 card-hover">
     <div className="w-12 h-12 rounded-full bg-clickblue-100 flex items-center justify-center mb-4">
       <Icon className="h-6 w-6 text-clickblue-600" />
     </div>
     <h3 className="text-xl font-semibold mb-3">{title}</h3>
-    <p className="text-gray-600">{description}</p>
+    <p className="text-gray-600 mb-4">{description}</p>
+    {button && button}
   </div>
 );
 
@@ -29,19 +31,27 @@ const Features = () => {
       description: 'Analisi approfondite per tracciare i tuoi progressi nel tempo.'
     },
     {
-      icon: Brain,
-      title: 'Training Personalizzato',
-      description: 'Esercizi mirati per migliorare i tempi di risposta e la precisione.'
+      icon: MessageSquare,
+      title: 'Domande Dinamiche',
+      description: 'Le domande variano per numero, modalità e contenuto ad ogni simulazione.'
     },
     {
-      icon: Bell,
-      title: 'Notifiche Clickday',
-      description: 'Resta aggiornato su date e orari dei prossimi clickday INAIL.'
+      icon: Users,
+      title: 'Gruppo Telegram',
+      description: 'Resta aggiornato su tutte le date e gli orari del Clickday tramite il canale Telegram di clickace.',
+      button: (
+        <Button
+          className="mt-2 bg-blue-500 hover:bg-blue-600 text-white"
+          onClick={() => window.open("https://t.me/clickace", "_blank")}
+        >
+          Entra nel gruppo
+        </Button>
+      )
     },
     {
       icon: Award,
-      title: 'Certificati di Progresso',
-      description: 'Riconoscimenti per i tuoi miglioramenti e progressi nel training.'
+      title: 'Possibilità di essere selezionati',
+      description: 'Il team di ClickAce potrebbe selezionarti per diventare un proprio cliccatore se i tuoi risultati sono molto positivi.'
     }
   ];
   
