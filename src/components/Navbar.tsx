@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MousePointerClick } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -33,8 +33,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="text-2xl font-bold heading-gradient">
-              ClickAce
+            <Link to="/" className="flex items-center gap-2">
+              <div className="flex items-center justify-center bg-gradient-to-r from-clickblue-600 to-clickblue-400 text-white rounded-lg p-1.5">
+                <MousePointerClick className="h-5 w-5" />
+              </div>
+              <span className="text-2xl font-bold heading-gradient">ClickAce</span>
             </Link>
           </div>
           
