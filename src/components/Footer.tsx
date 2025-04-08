@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Telegram, Linkedin, ArrowUp } from 'lucide-react';
+import { MessagesSquare, Linkedin, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -25,7 +25,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white transition-colors">
-                <Telegram className="h-5 w-5" />
+                <MessagesSquare className="h-5 w-5" />
                 <span className="sr-only">Telegram</span>
               </a>
               <a href="#" className="hover:text-white transition-colors">
