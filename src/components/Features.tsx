@@ -81,13 +81,6 @@ const Features = () => {
             </div>
           ))}
         </div>
-
-        <div className="mt-16 flex flex-col items-center justify-center">
-          <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-md">
-            <img src="/lovable-uploads/5129b4b6-db28-4e06-99a2-3c6a636cee0d.png" alt="ATS Logo" className="h-12 w-auto" />
-            <p className="text-gray-700 font-medium">Progetto in collaborazione con <span className="font-semibold">ATS - Consulenti Associati</span></p>
-          </div>
-        </div>
       </div>
     </section>
   );
