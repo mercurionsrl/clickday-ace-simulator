@@ -1,8 +1,7 @@
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import { Calendar } from '@/components/ui/calendar';
-import { CalendarCheck, Calendar as CalendarIcon } from 'lucide-react';
+import { CalendarCheck } from 'lucide-react';
 
 const CalendarioClickday = () => {
   // Data for the roadmap
@@ -65,19 +64,8 @@ const CalendarioClickday = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
-            <div className="md:col-span-3 bg-white p-6 rounded-xl shadow-md">
-              <h2 className="text-2xl font-semibold mb-4 flex items-center">
-                <CalendarIcon className="mr-2 h-6 w-6 text-clickblue-500" />
-                Calendario
-              </h2>
-              <Calendar 
-                mode="single"
-                showOutsideDays={true}
-                className="rounded-md border w-full"
-              />
-            </div>
-            <div className="md:col-span-2 bg-clickblue-50 p-6 rounded-xl shadow-md border border-clickblue-100">
+          <div className="mb-12">
+            <div className="bg-clickblue-50 p-6 rounded-xl shadow-md border border-clickblue-100 w-full">
               <h3 className="text-xl font-semibold mb-4">Promemoria</h3>
               <p className="text-gray-700 mb-4">
                 Ricordati di preparare tutti i documenti necessari con anticipo e di esercitarti con la nostra piattaforma per migliorare la tua velocità.
