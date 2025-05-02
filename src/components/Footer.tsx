@@ -37,18 +37,24 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Column 2 - Legal */}
+          {/* Column 2 - Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Legale</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">Link utili</h3>
             <ul className="space-y-2">
+              <li>
+                <Link to="/calendario-clickday" className="hover:text-white transition-colors">Calendario Clickday</Link>
+              </li>
+              <li>
+                <Link to="#" className="hover:text-white transition-colors">Guide</Link>
+              </li>
+              <li>
+                <Link to="/supporto" className="hover:text-white transition-colors">Modulo Contatto</Link>
+              </li>
               <li>
                 <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">Termini di Servizio</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+                <Link to="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link>
               </li>
             </ul>
             
