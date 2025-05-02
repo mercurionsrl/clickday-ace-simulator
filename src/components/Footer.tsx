@@ -37,34 +37,12 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Column 2 - Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Risorse</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/supporto" className="hover:text-white transition-colors">Supporto</Link>
-              </li>
-              <li>
-                <Link to="/calendario-clickday" className="hover:text-white transition-colors">Calendario Clickday</Link>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">Guide e Tutorial</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">Blog</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">FAQ</a>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Column 3 - Legal */}
+          {/* Column 2 - Legal */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Legale</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">Termini di Servizio</a>
@@ -82,11 +60,9 @@ const Footer = () => {
               Torna su
             </button>
           </div>
-        </div>
-        
-        <div className="mt-12 pt-8 border-t border-gray-800 text-sm">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p>&copy; {new Date().getFullYear()} ClickAce. Tutti i diritti riservati.</p>
+          
+          {/* Column 3 - Collaboration */}
+          <div>
             <div className="flex items-center gap-2">
               <span>Progetto in collaborazione con</span>
               <img 
@@ -97,6 +73,10 @@ const Footer = () => {
               <span className="font-medium">ATS - Consulenti Associati</span>
             </div>
           </div>
+        </div>
+        
+        <div className="mt-12 pt-8 border-t border-gray-800 text-sm">
+          <p>&copy; {new Date().getFullYear()} ClickAce. Tutti i diritti riservati.</p>
         </div>
       </div>
     </footer>
