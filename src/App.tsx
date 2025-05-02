@@ -10,6 +10,9 @@ import Supporto from "./pages/Supporto";
 import CalendarioClickday from "./pages/CalendarioClickday";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
+import FAQ from "./pages/FAQ";
+import Guide from "./pages/Guide";
+import TerminiServizio from "./pages/TerminiServizio";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +28,9 @@ const App = () => (
           <Route path="/calendario-clickday" element={<CalendarioClickday />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/guide" element={<Guide />} />
+          <Route path="/termini-servizio" element={<TerminiServizio />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
