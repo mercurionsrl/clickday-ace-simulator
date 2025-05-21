@@ -4,7 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
-import { Mail, MapPin, CheckCircle } from 'lucide-react';
+import { Mail, Building2, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -158,7 +159,7 @@ const ContactForm = () => {
             )}
           </div>
           
-          {/* Contact Info */}
+          {/* Business CTA instead of address */}
           <div className="flex flex-col space-y-8">
             <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100 card-hover">
               <div className="flex items-start">
@@ -173,17 +174,25 @@ const ContactForm = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100 card-hover">
-              <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-clickblue-100 flex items-center justify-center mr-4">
-                  <MapPin className="h-5 w-5 text-clickblue-600" />
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:border-clickblue-300 transition-all hover:shadow-xl">
+              <div className="flex items-start mb-4">
+                <div className="w-12 h-12 rounded-full bg-clickblue-100 flex items-center justify-center mr-4">
+                  <Building2 className="h-6 w-6 text-clickblue-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-1">Indirizzo</h4>
-                  <p className="text-gray-600">Via Roma, 123</p>
-                  <p className="text-gray-600">20100 Milano, Italia</p>
+                  <h4 className="text-xl font-semibold">Per Aziende</h4>
                 </div>
               </div>
+              
+              <p className="text-gray-700 mb-6">
+                Sei interessato a partecipare come azienda al bando ISI-INAIL per ottenere fondi? Scopri i nostri servizi dedicati.
+              </p>
+              
+              <Link to="/business">
+                <Button className="w-full bg-clickblue-500 hover:bg-clickblue-600">
+                  Scopri di più
+                </Button>
+              </Link>
             </div>
             
             <div className="mt-8 p-6 bg-clickblue-50 rounded-xl border border-clickblue-100">
