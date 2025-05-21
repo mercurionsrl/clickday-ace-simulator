@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -6,9 +5,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
 import { Mail, Building2, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const ContactForm = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,25 +17,29 @@ const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
       toast({
         title: "Richiesta inviata!",
-        description: "Ti contatteremo al più presto.",
+        description: "Ti contatteremo al più presto."
       });
-      
+
       // Reset form after delay
       setTimeout(() => {
         setSubmitted(false);
@@ -48,9 +52,7 @@ const ContactForm = () => {
       }, 3000);
     }, 1500);
   };
-  
-  return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-white to-blue-50">
+  return <section id="contact" className="py-20 bg-gradient-to-br from-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="inline-block px-4 py-1 bg-clickblue-100 text-clickblue-800 rounded-full text-sm font-medium mb-4">
@@ -68,8 +70,7 @@ const ContactForm = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-            {submitted ? (
-              <div className="h-full flex flex-col items-center justify-center text-center py-8">
+            {submitted ? <div className="h-full flex flex-col items-center justify-center text-center py-8">
                 <div className="w-16 h-16 bg-clickgreen-100 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle className="h-8 w-8 text-clickgreen-600" />
                 </div>
@@ -77,56 +78,29 @@ const ContactForm = () => {
                 <p className="text-gray-600 mb-6">
                   Grazie per averci contattato. Ti risponderemo al più presto.
                 </p>
-                <Button 
-                  onClick={() => setSubmitted(false)}
-                  className="bg-clickblue-500 hover:bg-clickblue-600"
-                >
+                <Button onClick={() => setSubmitted(false)} className="bg-clickblue-500 hover:bg-clickblue-600">
                   Invia un'altra richiesta
                 </Button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              </div> : <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Nome completo
                   </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Il tuo nome"
-                    required
-                  />
+                  <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="Il tuo nome" required />
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email
                   </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="La tua email"
-                    required
-                  />
+                  <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="La tua email" required />
                 </div>
                 
                 <div>
                   <label htmlFor="package" className="block text-sm font-medium text-gray-700 mb-1">
                     Pacchetto interessato
                   </label>
-                  <select
-                    id="package"
-                    name="package"
-                    value={formData.package}
-                    onChange={handleChange}
-                    className="w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-clickblue-500 focus:outline-none focus:ring-1 focus:ring-clickblue-500"
-                    required
-                  >
+                  <select id="package" name="package" value={formData.package} onChange={handleChange} className="w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-clickblue-500 focus:outline-none focus:ring-1 focus:ring-clickblue-500" required>
                     <option value="">Seleziona un pacchetto</option>
                     <option value="base">Base (Gratuito)</option>
                     <option value="pro">Pro</option>
@@ -138,25 +112,13 @@ const ContactForm = () => {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Messaggio
                   </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Scrivi qui la tua richiesta..."
-                    rows={4}
-                  />
+                  <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Scrivi qui la tua richiesta..." rows={4} />
                 </div>
                 
-                <Button
-                  type="submit"
-                  className="w-full bg-clickblue-500 hover:bg-clickblue-600 text-white py-6"
-                  disabled={isSubmitting}
-                >
+                <Button type="submit" className="w-full bg-clickblue-500 hover:bg-clickblue-600 text-white py-6" disabled={isSubmitting}>
                   {isSubmitting ? 'Invio in corso...' : 'Invia richiesta'}
                 </Button>
-              </form>
-            )}
+              </form>}
           </div>
           
           {/* Business CTA instead of address */}
@@ -184,9 +146,7 @@ const ContactForm = () => {
                 </div>
               </div>
               
-              <p className="text-gray-700 mb-6">
-                Sei interessato a partecipare come azienda al bando ISI-INAIL per ottenere fondi? Scopri i nostri servizi dedicati.
-              </p>
+              <p className="text-gray-700 mb-6">Sei interessato a partecipare come azienda al bando ISI-INAIL per ottenere fondi? Scopri la nostra consulenza gratuita.</p>
               
               <Link to="/business">
                 <Button className="w-full bg-clickblue-500 hover:bg-clickblue-600">
@@ -215,8 +175,6 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactForm;
