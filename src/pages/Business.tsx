@@ -1,8 +1,7 @@
-
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Building2, FileText, CheckCircle, HandCoins, HandHelping, Info, Users, Briefcase, Wallet, Support } from 'lucide-react';
+import { Building2, FileText, CheckCircle, HandCoins, HandHelping, Info, Users, Briefcase, Wallet, HelpingHand } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Business = () => {
@@ -106,7 +105,7 @@ const Business = () => {
                         <span>Consulenza personalizzata per massimizzare le possibilità di successo</span>
                       </li>
                       <li className="flex items-start">
-                        <Support className="h-5 w-5 text-clickblue-600 mr-2 flex-shrink-0" />
+                        <HelpingHand className="h-5 w-5 text-clickblue-600 mr-2 flex-shrink-0" />
                         <span><Link to="/supporto" className="text-clickblue-600 hover:underline">Assistenza dedicata</Link> durante tutto il processo</span>
                       </li>
                     </ul>
