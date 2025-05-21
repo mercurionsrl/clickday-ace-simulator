@@ -414,7 +414,7 @@ const Business = () => {
                 <div className="flex items-center justify-center">
                   <div className="p-3 bg-white rounded-lg border border-yellow-300">
                     <p className="font-semibold text-center">
-                      ClickAce ti mette a disposizione i migliori esperti in ambito clickday e la procedura è inclusa nel costo che <span className="text-clickblue-600">paghi solo se passi!</span>
+                      ClickAce e ATS ti mettono a disposizione i migliori esperti in ambito clickday e la procedura è inclusa nel costo che <span className="text-clickblue-600">paghi solo se passi!</span>
                     </p>
                   </div>
                 </div>
@@ -435,29 +435,12 @@ const Business = () => {
                 
                 <div className="md:w-1/2 text-center md:text-left">
                   <div className="bg-clickblue-50 p-6 rounded-xl">
-                    <h4 className="font-semibold mb-2">La nostra offerta include:</h4>
-                    <ul className="text-left space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-clickgreen-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Simulazioni realistiche del clickday</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-clickgreen-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Tecnologie all'avanguardia per ottimizzare i tempi</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-clickgreen-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Formazione specifica per il tuo personale</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-clickgreen-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Assistenza in tempo reale durante il clickday</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-clickgreen-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="font-medium">Pagamento solo in caso di successo!</span>
-                      </li>
-                    </ul>
+                    <p className="text-gray-700 mb-4">
+                      ClickAce e ATS offrono un supporto completo durante tutto il processo del clickday per garantire le massime probabilità di successo.
+                    </p>
+                    <p className="font-medium text-clickblue-700">
+                      Ricorda: paghi solo se il tuo progetto viene approvato!
+                    </p>
                   </div>
                 </div>
               </div>
@@ -475,7 +458,7 @@ const Business = () => {
                 </Button>
               </Link>
               <p className="mt-4 text-sm">
-                Il team di ClickAce è al tuo servizio per supportarti durante tutto il processo
+                Il team di ClickAce e ATS è al tuo servizio per supportarti durante tutto il processo
               </p>
             </div>
           </div>
