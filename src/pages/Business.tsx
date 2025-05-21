@@ -166,7 +166,17 @@ const Business = () => {
                       <span className="text-red-600 font-medium mr-2">•</span>
                       <span>Aziende con condanne per omicidio colposo o lesioni personali colpose legate alla violazione delle norme sulla sicurezza</span>
                     </li>
+                    <li className="flex items-start">
+                      <span className="text-red-600 font-medium mr-2">•</span>
+                      <span>Aziende che hanno superato il limite "de minimis" (regime di aiuti di stato che impone un tetto massimo agli aiuti pubblici ricevuti nell'arco di tre esercizi finanziari)</span>
+                    </li>
                   </ul>
+                  
+                  <div className="mt-4 p-3 bg-white rounded-lg border border-red-200">
+                    <p className="text-sm text-gray-700">
+                      <span className="font-semibold">Importante:</span> Il bando ISI-INAIL rientra nel regime "de minimis". Se la tua azienda ha già ricevuto aiuti di stato che superano il limite stabilito, potrebbe non essere idonea. <Link to="/supporto" className="text-clickblue-600 hover:underline">Contattaci</Link> per verificare la tua situazione.
+                    </p>
+                  </div>
                 </div>
               </div>
               
