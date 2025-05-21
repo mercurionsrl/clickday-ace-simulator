@@ -13,7 +13,6 @@ import CookiePolicy from "./pages/CookiePolicy";
 import FAQ from "./pages/FAQ";
 import Guide from "./pages/Guide";
 import TerminiServizio from "./pages/TerminiServizio";
-import Business from "./pages/Business";
 
 const queryClient = new QueryClient();
 
@@ -32,7 +31,6 @@ const App = () => (
           <Route path="/faq" element={<FAQ />} />
           <Route path="/guide" element={<Guide />} />
           <Route path="/termini-servizio" element={<TerminiServizio />} />
-          <Route path="/business" element={<Business />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
